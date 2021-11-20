@@ -9,9 +9,10 @@ import hello.core.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService {
 
-    private final MemberRepository memberRepository;
+
     //private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
     //private final DiscountPolicy discountPolicy = new RateDiscountPolicy(); //dip, ocp 위반
+    private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy; //인터페이스에만 의존, 구현체는??
 
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
